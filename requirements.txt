@@ -14,7 +14,7 @@ hachoir
 motor==3.3.2
 #pillow==9.5.0
 psutil
-py-tgcalls==0.9.7
+#py-tgcalls==0.9.7
 pykeyboard
 pymongo==4.6.3
 python-dotenv
@@ -38,6 +38,7 @@ flask
 flask_restful
 bing-image-urls
 bing_image_downloader
+git+https://github.com/pytgcalls/pytgcalls.git
 git+https://github.com/python-pillow/Pillow.git
 git+https://github.com/KurimuzonAkuma/pyrogram@dev
 git+https://github.com/yt-dlp/yt-dlp.git
