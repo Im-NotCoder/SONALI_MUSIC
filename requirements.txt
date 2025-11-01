@@ -12,7 +12,7 @@ httpx[http2]
 heroku3
 hachoir
 motor==3.3.2
-pillow==9.5.0
+#pillow==9.5.0
 psutil
 py-tgcalls==0.9.7
 pykeyboard
@@ -38,6 +38,7 @@ flask
 flask_restful
 bing-image-urls
 bing_image_downloader
+git+https://github.com/python-pillow/Pillow.git
 git+https://github.com/KurimuzonAkuma/pyrogram@dev
 git+https://github.com/yt-dlp/yt-dlp.git
 git+https://github.com/alexmercerind/youtube-search-python@main
