@@ -3,10 +3,7 @@ services:
     plan: free
     name: sonali-music
     runtime: python
-    buildCommand: |
-      pyenv install 3.11.9 -s
-      pyenv global 3.11.9
-      pip install -U -r requirements.txt
+    buildCommand: pip install -U -r requirements.txt
     startCommand: python3 server.py & python3 -m SONALI_MUSIC
     envVars:
       - key: API_ID
