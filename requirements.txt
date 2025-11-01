@@ -34,6 +34,8 @@ speedtest-cli
 unidecode
 urllib3
 wget
+flask
+flask_restful
 bing-image-urls
 bing_image_downloader
 git+https://github.com/KurimuzonAkuma/pyrogram@dev
