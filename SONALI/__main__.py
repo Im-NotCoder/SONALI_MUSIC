@@ -28,7 +28,7 @@ def run_flask():
 def keep_alive():
     while True:
         try:
-            requests.get("https://sonali-music.onrender.com")
+            requests.get("https://sonali-music-d3ki.onrender.com")
             LOGGER.info("Pinged host URL successfully ✅")
         except Exception as e:
             LOGGER.error(f"Ping error : {e}")
