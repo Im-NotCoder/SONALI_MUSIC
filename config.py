@@ -6,14 +6,14 @@ from pyrogram import filters
 load_dotenv()
 # ===============================================
 
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
-BOT_TOKEN = getenv("BOT_TOKEN")
+API_ID = int(getenv("API_ID", None))
+API_HASH = getenv("API_HASH", None)
+BOT_TOKEN = getenv("BOT_TOKEN", None)
 
 # ===============================================
 
-OWNER_ID = int(getenv("OWNER_ID", 6051510669))
-OWNER_USERNAME = getenv("OWNER_USERNAME", "ll_ALPHA_BABY_lll")
+OWNER_ID = int(getenv("OWNER_ID", 7473021518)
+OWNER_USERNAME = getenv("OWNER_USERNAME", "TheSigmaCoder")
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
 # ===============================================
@@ -23,13 +23,13 @@ BOT_NAME = getenv("BOT_NAME", "Sonali Music")
 
 # ===============================================
 
-MONGO_DB_URI = getenv("MONGO_DB_URI")
+MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 
 # ===============================================
 
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
-HEROKU_API_KEY = getenv("HEROKU_API_KEY")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
+HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 
 # ===============================================
 
@@ -48,8 +48,8 @@ AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
 
 # ===============================================
 
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID")
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET")
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
 # ===============================================
 
