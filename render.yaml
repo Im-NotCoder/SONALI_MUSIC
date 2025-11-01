@@ -2,7 +2,7 @@ services:
   - type: web
     plan: free
     name: sonali-music
-    env: python-3.11.9
+   # env: python
     buildCommand: pip install -U -r requirements.txt
     startCommand: python3 server.py & python3 -m SONALI_MUSIC
     envVars:
