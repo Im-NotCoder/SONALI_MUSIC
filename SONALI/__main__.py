@@ -1,7 +1,11 @@
 import asyncio
 import importlib
+import threading
+import time
+import requests
 
 from pyrogram import idle
+from flask import Flask
 
 import config
 from SONALI import LOGGER, app, userbot
@@ -11,6 +15,24 @@ from SONALI.plugins import ALL_MODULES
 from SONALI.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
+
+flask_app = Flask(__name__)
+
+@flask_app.route('/')
+def home():
+    return "Music Bot is running!"
+
+def run_flask():
+    flask_app.run(host="0.0.0.0", port=8000)
+
+def keep_alive():
+    while True:
+        try:
+            requests.get("https://sonali-music.onrender.com")
+            LOGGER.info("Pinged host URL successfully ✅")
+        except Exception as e:
+            LOGGER.error(f"Ping error : {e}")
+        time.sleep(300) 
 
 async def init():
     if (
@@ -49,4 +71,15 @@ async def init():
 
 
 if __name__ == "__main__":
+    
+    flask_thread = threading.Thread(target=run_flask)
+    flask_thread.daemon = True
+    flask_thread.start()
+
+    
+    keep_alive_thread = threading.Thread(target=keep_alive)
+    keep_alive_thread.daemon = True
+    keep_alive_thread.start()
+
+    
     asyncio.get_event_loop().run_until_complete(init())
