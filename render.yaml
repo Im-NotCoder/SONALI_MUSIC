@@ -3,7 +3,7 @@ services:
     plan: free
     name: sonali-music
     runtime: python
-    buildCommand: pip install -U -r requirements.txt
+    buildCommand: pip install -U -r alpha.txt
     startCommand: python3 server.py & python3 -m SONALI_MUSIC
     envVars:
       - key: API_ID
